@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>ADD PERSONS</h1>
+
+<form method="POST">
+   {% csrf_token %}
+  <div class="mb-3">
+    <label  class="form-label text-primary">Name</label>
+    <input type="text" class="form-control " name="n">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label text-primary">Place</label>
+    <input type="text" class="form-control " name="p">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label text-primary">Age</label>
+    <input type="text" class="form-control " name="a">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

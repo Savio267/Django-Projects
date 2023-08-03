@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>VIEW PERSON DETAILS PAGE</h1>
+
+<div class="text-white">
+<ol >Library</ol>
+{% for i in b %}
+<ul>PERSON DETAILS:</ul>
+<li>NAME:{{i.name}}</li><br>
+<li>PLACE:{{i.place}}</li><br>
+<li>AGE:{{i.age}}</li><br>
+{% endfor %}
+    </div>
+
+{% endblock %}

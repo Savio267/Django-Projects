@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>ADD BOOK</h1>
+
+<form method="POST" enctype="multipart/form-data">
+   {% csrf_token %}
+  <div class="mb-3">
+    <label  class="form-label text-primary">Title</label>
+    <input type="text" class="form-control " name="t">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label text-primary">Author</label>
+    <input type="text" class="form-control " name="a">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label text-primary">Price</label>
+    <input type="text" class="form-control " name="p">
+  </div>
+    <div class="mb-3">
+    <label  class="form-label text-primary">Pdf</label>
+    <input type="file" class="form-control " name="f">
+  </div>
+    <div class="mb-3">
+     <label  class="form-label text-primary">Cover</label>
+    <input type="file" class="form-control " name="i">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

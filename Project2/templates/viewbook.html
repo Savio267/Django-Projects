@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>VIEW BOOK PAGE</h1>
+<!--<table class="table table-bordered">-->
+<!--    <tr>-->
+<!--        <th>TITLE</th>-->
+<!--        <th>AUTHOR </th>-->
+<!--        <th>PRICE</th>-->
+<!--    </tr>-->
+<!--    {% for i in b %}-->
+<!--    <tr>-->
+<!--        <td>{{i.title}}</td>-->
+<!--        <td>{{i.author}}</td>-->
+<!--        <td>{{i.price}}</td>-->
+<!--    </tr>-->
+<!--{% endfor %}-->
+<!--</table>-->
+
+<div class="text-white">
+<ol >Library</ol>
+<ul> BOOK DETAILS:</ul>
+    {% for i in b %}
+<li>TITLE:{{i.title}}</li><br>
+<li>AUTHOR:{{i.author}}</li><br>
+<li>PRICE:{{i.price}}</li><br>
+    <li><a href="{{i.pdf.url}}">DOCUMENT</a></li><br>
+    <li><img src="{{i.cover.url}}" height="100px" width="100px"></li><br>
+    <li>View:<a href="{% url 'app1:view' i.id %}" class="btn btn-primary">View</a></li><br>
+    <li>Edit:<a href="{% url 'app1:edit' i.id %}" class="btn btn-primary">Edit</a></li><br>
+    <li>Delete:<a href="{% url 'app1:delete' i.id %}" class="btn btn-primary">Delete</a></li>
+{% endfor %}
+    </div>
+{% endblock %}
+
+

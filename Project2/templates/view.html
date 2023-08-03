@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>VIEW  PAGE</h1>
+<!--<table class="table table-bordered">-->
+<!--    <tr>-->
+<!--        <th>TITLE</th>-->
+<!--        <th>AUTHOR </th>-->
+<!--        <th>PRICE</th>-->
+<!--    </tr>-->
+<!--    {% for i in b %}-->
+<!--    <tr>-->
+<!--        <td>{{i.title}}</td>-->
+<!--        <td>{{i.author}}</td>-->
+<!--        <td>{{i.price}}</td>-->
+<!--    </tr>-->
+<!--{% endfor %}-->
+<!--</table>-->
+
+<div class="text-white">
+<ol >Library</ol>
+<ul> BOOK DETAILS:</ul>
+    <li><a href="{{b.pdf.url}}">DOCUMENT</a></li><br>
+    <li>TITLE:{{b.title}}</li><br>
+    <li>AUTHOR:{{b.author}}</li><br>
+    <li>PRICE:{{b.price}}</li><br>
+    <li><img src="{{b.cover.url}}" height="100px" width="100px"></li><br>
+</div>
+{% endblock %}
